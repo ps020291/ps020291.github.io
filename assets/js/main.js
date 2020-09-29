@@ -70,16 +70,16 @@ $(function() {
                 $target = $this.attr("href");
             $body.addClass("offcanvas-open");
             $($target).addClass("offcanvas-open");
-            $offCanvasOverlay.fadeIn();
+            // $offCanvasOverlay.fadeIn();
             if ($this.parent().hasClass("mobile-menu-toggle")) {
                 $this.addClass("close");
             }
         });
-        $(".offcanvas-close, .offcanvas-overlay").on("click", function(e) {
+        $(".offcanvas-close").on("click", function(e) {
             e.preventDefault();
             $body.removeClass("offcanvas-open");
             $offCanvas.removeClass("offcanvas-open");
-            $offCanvasOverlay.fadeOut();
+            // $offCanvasOverlay.fadeOut();
             $mobileMenuToggle.find("a").removeClass("close");
         });
     })();
